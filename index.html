@@ -1,18 +1,19 @@
+```html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS-оформление</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Учебный сайт по HTML5 и семантической структуре страницы">
+    <title>HTML5 — Семантическая структура</title>
 </head>
 
 <body>
 
     <header>
-        <h1>Добро пожаловать!</h1>
+        <h1>ЛОГО</h1>
 
-        <nav>
+        <nav aria-label="Основная навигация">
             <a href="#about">О нас</a>
             <a href="#features">Преимущества</a>
             <a href="#contacts">Контакты</a>
@@ -21,36 +22,93 @@
 
     <main>
 
-        <section id="about">
-            <h2>О нас</h2>
+        <section id="hero">
+            <h2>Добро пожаловать!</h2>
+
             <p>
-                Этот сайт создан для изучения CSS.
-                В процессе практической работы были изучены
-                основные возможности каскадных таблиц стилей.
+                Краткий слоган или описание сайта.
             </p>
 
-            <a href="#features" class="button">Подробнее</a>
+            <a href="#features">Узнать больше</a>
+        </section>
+
+        <section id="about">
+            <h2>О нас</h2>
+
+            <p>
+                Немного текста о проекте, целях и задачах.
+                Данная страница создана для изучения семантической
+                структуры HTML5.
+            </p>
         </section>
 
         <section id="features">
-            <h2>Преимущества CSS</h2>
+            <h2>Наши преимущества</h2>
 
-            <p>
-                CSS позволяет изменять внешний вид HTML-документов:
-                цвета, шрифты, размеры, отступы, границы и фон.
-            </p>
+            <article>
+                <h3>Скорость</h3>
+                <p>
+                    Загрузка страниц за доли секунды.
+                </p>
+            </article>
 
-            <p>
-                Использование CSS делает веб-страницы более
-                красивыми, удобными и структурированными.
-            </p>
+            <article>
+                <h3>Надежность</h3>
+                <p>
+                    Стабильная работа 24/7.
+                </p>
+            </article>
+
+            <article>
+                <h3>Поддержка</h3>
+                <p>
+                    Помощь пользователям в любое время.
+                </p>
+            </article>
         </section>
+
+        <section>
+            <h2>Иллюстрация</h2>
+
+            <figure>
+                <img
+                    src="images/hero.jpg"
+                    alt="Пример иллюстрации сайта"
+                    width="600"
+                >
+                <figcaption>
+                    Иллюстрация главного раздела
+                </figcaption>
+            </figure>
+        </section>
+
+        <aside>
+            <h2>Полезные ссылки</h2>
+
+            <ul>
+                <li>
+                    <a href="#">Документация HTML</a>
+                </li>
+                <li>
+                    <a href="#">Руководство по доступности</a>
+                </li>
+            </ul>
+        </aside>
 
     </main>
 
     <footer id="contacts">
-        <p>&copy; 2025 Учебный сайт</p>
+        <p>
+            &copy; 2025 Учебный сайт. Все права защищены.
+        </p>
+
+        <p>
+            <a href="mailto:email@example.com">
+                email@example.com
+            </a>
+        </p>
     </footer>
 
 </body>
 </html>
+```
